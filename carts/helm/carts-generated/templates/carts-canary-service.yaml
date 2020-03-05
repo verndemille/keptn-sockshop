@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2020-03-05T19:03:00Z"
+  name: carts-canary
+  resourceVersion: "25214"
+  selfLink: /api/v1/namespaces/sockshop-staging/services/carts
+  uid: eedb980b-5f13-11ea-ad22-42010a80006b
+spec:
+  ports:
+  - name: http
+    port: 80
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: carts
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
